@@ -23,12 +23,12 @@ noExpire = 0
 expired = 0
 for i in range(numUsers):
     userShad = shadowList[i].split(':')
-    # Check for days til password expiration
+# Check for days til password expiration
     try:
         if int(userShad[4]) > 90:
             print(userShad[0] + "'s password expires after more than 90 days")
             noExpire += 1
-    # Exception for blank expiration date
+# Exception for blank expiration date
     except ValueError:
         print(userShad[0] + "'s password does not have an expiration date")
         noExpire += 1
