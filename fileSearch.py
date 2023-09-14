@@ -22,5 +22,6 @@ for file in os.listdir():
 		if file.split(".")[-1] == extension:
 			files.append(file)
 
+# Count and print selected files
 print(str(len(files)) + " Files with extension: " + extension)
 print(files)
